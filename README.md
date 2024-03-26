@@ -21,3 +21,19 @@ Em Kubernetes, um ReplicaSet (RS) é utilizado para gerenciar um conjunto de ré
 Um Deployment fornece atualizações declarativas para pods e ReplicaSets.
 
 Você descreve um estado desejado em uma implantação e o controlador de implantação altera o estado real para o estado desejado em uma taxa controlada. Você pode definir implantações para criar novos ReplicaSets ou para remover implantações existentes e adotar todos os seus recursos com novas implantações.
+
+### Armazenamento
+
+#### Volume
+
+Volumes são basicamente diretórios contendo dados, acessíveis aos contêineres em um pod. Volumes possuem ciclo de vida dependentes de Pods e independentes de containers.
+
+#### PersistentVolume
+
+Um PersistentVolume (PV) é uma parte do armazenamento dentro do cluster que tenha sido provisionada por um administrador, ou dinamicamente utilizando `StorageClasses`.
+
+#### PersistentVolumeClaim
+
+Uma PersistentVolumeClaim (PVC) é uma requisição para armazenamento por um usuário. É similar a um Pod. Pods utilizam recursos do nó e PVCs utilizam recursos do PV.
+
+Para mais informações, utilizar como referência o link da [documentação](https://kubernetes.io/pt-br/docs/concepts/storage/volumes/).
