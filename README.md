@@ -37,3 +37,11 @@ Um PersistentVolume (PV) é uma parte do armazenamento dentro do cluster que ten
 Uma PersistentVolumeClaim (PVC) é uma requisição para armazenamento por um usuário. É similar a um Pod. Pods utilizam recursos do nó e PVCs utilizam recursos do PV.
 
 Para mais informações, utilizar como referência o link da [documentação](https://kubernetes.io/pt-br/docs/concepts/storage/volumes/).
+
+#### StorageClasses
+
+Um StorageClass fornece uma maneira para os administradores descreverem as classes de armazenamento que oferecem.
+
+#### StatefulSet
+
+O StatefulSet é utilizado para gerenciar aplicativos que precisam manter estado, ou seja, que necessitam de identidades persistentes e garantias de ordem e unicidade para seus Pods, ao contrário de um Deployment que trata seus Pods como efêmeros.
