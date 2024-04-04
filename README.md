@@ -45,3 +45,13 @@ Um StorageClass fornece uma maneira para os administradores descreverem as class
 #### StatefulSet
 
 O StatefulSet é utilizado para gerenciar aplicativos que precisam manter estado, ou seja, que necessitam de identidades persistentes e garantias de ordem e unicidade para seus Pods, ao contrário de um Deployment que trata seus Pods como efêmeros.
+
+#### Probes
+
+Os `Probes` são mecanismos utilizados para verificar o estado de um contêiner em execução. Esses `probes`(sondas) ajudam o Kubernetes a garantir que os contêineres estejam saudáveis e prontos para lidar com o tráfego, aumentando a confiabilidade e a disponibilidade das aplicações.
+
+**Liveness Probes** - Ajuda a detectar situações em que aplicativos em execução por longos períodos eventualmente quebram e não conseguem se recuperar, exceto sendo reiniciados.
+
+**Readiness Probe** - Verifica se o contêiner está pronto para receber tráfego. Se o contêiner não estiver pronto, o Kubernetes interrompe o envio de tráfego para ele, permitindo que ele se recupere antes de ser colocado em serviço.
+
+**Startup Probe** - Consegue verificar se o contêiner está pronto para receber tráfego durante o processo de inicialização. É semelhante ao `Readness Probe`, mas é usado apenas durante o início do contêiner.
