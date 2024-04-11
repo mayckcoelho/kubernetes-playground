@@ -42,11 +42,11 @@ Para mais informações, utilizar como referência o link da [documentação](ht
 
 Um StorageClass fornece uma maneira para os administradores descreverem as classes de armazenamento que oferecem.
 
-#### StatefulSet
+### StatefulSet
 
 O StatefulSet é utilizado para gerenciar aplicativos que precisam manter estado, ou seja, que necessitam de identidades persistentes e garantias de ordem e unicidade para seus Pods, ao contrário de um Deployment que trata seus Pods como efêmeros.
 
-#### Probes
+### Probes
 
 Os `Probes` são mecanismos utilizados para verificar o estado de um contêiner em execução. Esses `probes`(sondas) ajudam o Kubernetes a garantir que os contêineres estejam saudáveis e prontos para lidar com o tráfego, aumentando a confiabilidade e a disponibilidade das aplicações.
 
@@ -56,12 +56,12 @@ Os `Probes` são mecanismos utilizados para verificar o estado de um contêiner 
 
 **Startup Probe** - Consegue verificar se o contêiner está pronto para receber tráfego durante o processo de inicialização. É semelhante ao `Readness Probe`, mas é usado apenas durante o início do contêiner.
 
-#### HorizontalPodAutoscaler
+### HorizontalPodAutoscaler
 
 O `HorizontalPodAutoscaler` do Kubernetes automatiza o ajuste da quantidade de pods em um Deployment ou StatefulSet para atender à demanda. Ele faz isso automaticamente, aumentando ou diminuindo a quantidade de pods conforme necessário.
 
 É necessário ter um servidor de métricas para capturar a utilização de CPU [Metric Server](https://github.com/kubernetes-sigs/metrics-server).
 
-#### VerticalPodAutoscaler
+### VerticalPodAutoscaler
 
 O `VerticalPodAutoscaler` remove a necessidade de definir limites e pedidos por recursos do sistema, como cpu e memória. Quando definido, ele define os consumos de maneira automática baseada na utilização em cada um dos nós, além disso, quanto tem disponível ainda de recurso.
