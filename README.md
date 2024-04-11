@@ -55,3 +55,13 @@ Os `Probes` são mecanismos utilizados para verificar o estado de um contêiner 
 **Readiness Probe** - Verifica se o contêiner está pronto para receber tráfego. Se o contêiner não estiver pronto, o Kubernetes interrompe o envio de tráfego para ele, permitindo que ele se recupere antes de ser colocado em serviço.
 
 **Startup Probe** - Consegue verificar se o contêiner está pronto para receber tráfego durante o processo de inicialização. É semelhante ao `Readness Probe`, mas é usado apenas durante o início do contêiner.
+
+#### HorizontalPodAutoscaler
+
+O `HorizontalPodAutoscaler` do Kubernetes automatiza o ajuste da quantidade de pods em um Deployment ou StatefulSet para atender à demanda. Ele faz isso automaticamente, aumentando ou diminuindo a quantidade de pods conforme necessário.
+
+É necessário ter um servidor de métricas para capturar a utilização de CPU [Metric Server](https://github.com/kubernetes-sigs/metrics-server).
+
+#### VerticalPodAutoscaler
+
+O `VerticalPodAutoscaler` remove a necessidade de definir limites e pedidos por recursos do sistema, como cpu e memória. Quando definido, ele define os consumos de maneira automática baseada na utilização em cada um dos nós, além disso, quanto tem disponível ainda de recurso.
