@@ -65,3 +65,12 @@ O `HorizontalPodAutoscaler` do Kubernetes automatiza o ajuste da quantidade de p
 ### VerticalPodAutoscaler
 
 O `VerticalPodAutoscaler` remove a necessidade de definir limites e pedidos por recursos do sistema, como cpu e memória. Quando definido, ele define os consumos de maneira automática baseada na utilização em cada um dos nós, além disso, quanto tem disponível ainda de recurso.
+
+### Kubernetes Dashboard
+
+O `Kubernetes Dashboard` é muito útil para verificar o funcionamento das aplicações, porém ele pode apresentar problemas em relação à segurança por alguns motivos:
+
+- O usuário do dashboard tem permissões administrativas, podendo criar ou deletar qualquer recurso do cluster, possibilitando a obtenção de chaves e segredos.
+- O dashboard precisa de uma conexão constante entre um terminal e o cluster para ser mantido ativo.
+
+É possível realizar todos os acessos e verificações através do terminal sem os riscos de segurança associados.
